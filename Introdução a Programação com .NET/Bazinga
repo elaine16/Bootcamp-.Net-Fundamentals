@@ -44,4 +44,31 @@ Caso #2: Raj trapaceou!
 
 Caso #3: De novo!
 */
+using System; 
 
+class minhaClasse {
+
+    static void Main(string[] args) { 
+
+            int qtdTeste = int.Parse(Console.ReadLine());
+            string a, b;
+            for (int i = 1; i <= qtdTeste; ++i){
+                string[] valores = Console.ReadLine().Split();
+                a = valores[0];
+                b = valores[1];
+               if(a == b) Console.WriteLine("Caso #{0}: De novo!", i);
+		else if(a == "tesoura" && b == "papel")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "papel" && b == "pedra")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "pedra" && b == "lagarto")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "lagarto" && b == "Spock") Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "Spock" && b == "tesoura") Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "tesoura" && b == "lagarto") Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "lagarto" && b == "papel")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "papel" && b == "Spock")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "Spock" && b == "pedra")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else if(a == "pedra" && b == "tesoura")  Console.WriteLine("Caso #{0}: Bazinga!", i);
+		else Console.WriteLine("Caso #{0}: Raj trapaceou!", i);
+		
+            }
+    }
+}
