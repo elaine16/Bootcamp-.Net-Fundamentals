@@ -25,7 +25,7 @@ Nesse curso o aluno terá o primeiro contato com a plataforma .NET e sua linguag
 *Introdução a Programação com .NET:
 Nesse desafio de codificação você irá praticar através do desenvolvimento de algoritmos os conceitos de pensamento computacional apresentados nas aulas e exercícios anteriores.
 
-Orientação a objetos em .NET
+*Orientação a objetos em .NET:
 Um curso voltado para iniciantes em C# e .NET que foca no aprendizado teórico dos principais conceitos em orientação a objetos, como métodos, classes e propriedades.
 
 *Projeto - Criando uma aplicação de transferências bancárias com .NET
