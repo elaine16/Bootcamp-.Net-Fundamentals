@@ -1,9 +1,6 @@
 /*
  Programa para Validação de Notas
-
-
- Intermediário
- Princípios Básicos
+
 Desafio
 O calendário escolar está passando bem rápido, devido a isso, as professoras de uma escola estão com dificuldade para calcular as notas dos alunos. Visando em resolver a situação, a diretora da escola contratou você para desenvolver um programa que leia as notas da primeira e da segunda avaliação de um aluno. Calcule e imprima a média semestral.
 
@@ -44,5 +41,29 @@ novo calculo (1-sim 2-nao)
 
 */
 
+using System;
+
+class Desafio {
+    static void Main() {
+        
+        int notasLidas = 0;
+        double x=0;
+        
+        while (notasLidas < 2){
+          double nota = double.Parse(Console.ReadLine());
+          if (nota < 0 || nota > 10){
+            Console.WriteLine("nota invalida");
+          } else if (notasLidas == 0){
+            x = nota;
+            notasLidas++;
+          } else if (notasLidas == 1){
+            double media = (x+nota)/2;
+            Console.Write("media = ");
+            Console.WriteLine(media.ToString("N2"));
+            notasLidas++;
+          }
+        } 
+    }
+}
 
 
