@@ -40,30 +40,44 @@ media = 8.50
 novo calculo (1-sim 2-nao)
 
 */
-
 using System;
 
 class Desafio {
     static void Main() {
         
-        int notasLidas = 0;
-        double x=0;
-        
-        while (notasLidas < 2){
-          double nota = double.Parse(Console.ReadLine());
-          if (nota < 0 || nota > 10){
-            Console.WriteLine("nota invalida");
-          } else if (notasLidas == 0){
-            x = nota;
-            notasLidas++;
-          } else if (notasLidas == 1){
-            double media = (x+nota)/2;
-            Console.Write("media = ");
-            Console.WriteLine(media.ToString("N2"));
-            notasLidas++;
+      double n1,n2;
+      double number = 1.0;
+  
+      while(number==1){
+          n1 = double.Parse(Console.ReadLine());
+            
+          while(n1<0 || n1>10){
+               Console.WriteLine("nota invalida\n");
+               n1 = double.Parse(Console.ReadLine());
           }
-        } 
-    }
+          
+          n2 = double.Parse(Console.ReadLine());
+          
+          while(n2<0 || n2>10){
+               Console.WriteLine("nota invalida\n");
+               n2 = double.Parse(Console.ReadLine());
+          }
+      double media = (n1+n2)/2;  
+      
+      Console.Write("media = ");
+      Console.WriteLine(media.ToString("N2"));
+      
+      Console.WriteLine("novo calculo (1-sim 2-nao)\n");
+      
+      number = double.Parse(Console.ReadLine());
+          
+          while(number!=1 && number!=2){
+              Console.WriteLine("novo calculo (1-sim 2-nao)\n");
+              number = double.Parse(Console.ReadLine());
+          }
+      }
+
+  }
 }
 
 
