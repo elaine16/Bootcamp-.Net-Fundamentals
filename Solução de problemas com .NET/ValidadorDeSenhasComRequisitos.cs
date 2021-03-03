@@ -1,9 +1,6 @@
 /*
 Validador de senhas com requisitos
-
-
- Intermediário
- Strings
+
 Desafio
 Pedro e Fernando são os desenvolvedores em uma stratup e vão desenvolver o novo sistema de cadastro, e pediram a sua ajuda. Sua task é fazer o código que valide as senhas que são cadastradas, para isso você deve atentar aos requisitos a seguir:
 
@@ -44,4 +41,29 @@ Senha invalida.
 Senha valida.
  
 */
+using System;
+using System.Text.RegularExpressions;
+
+class Desafio {
+  static void Main() {
+    while (true) {
+      string senha = Console.ReadLine();
+
+      if (string.IsNullOrEmpty(senha)) break;
+
+      Regex rx = new Regex("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,32}$");
+      Match match = rx.Match(senha);
+      
+      if (match.Success)
+      {
+        Console.WriteLine("Senha valida.");
+      }
+      else
+      {
+        Console.WriteLine("Senha invalida.");
+        
+      }
+    }
+  }
+}
 
